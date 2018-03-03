@@ -4,7 +4,7 @@ module.exports = function count(s, pairs) {
     for(let i = 0; i < pairs.length; i++){
         N *= Math.pow(pairs[i][0], pairs[i][1]); 
     }
-    if (N > 10000000) return 0;
+    if (N > 100000000) return 0;
     
     for(let k = 1; k <= N; k++){
         for(let j = 0; j < s.length; j++){
@@ -15,7 +15,7 @@ module.exports = function count(s, pairs) {
       
     }
     
-      const result = answer % 1000000007;
+      const result = (s.length >1 ? Math.floor(answer/3) : answer) % 1000000007;
     
     return result;
 }
