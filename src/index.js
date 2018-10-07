@@ -29,7 +29,7 @@ module.exports = function count(s, pairs) {
 
 function nod(n, m) {
     if(m > 0){ 
-      var k = n % m;
+      let k = n % m;
       return nod(m, k); 
     } 
     else { 
